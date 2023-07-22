@@ -21,7 +21,7 @@ SCENE FOLDER
 class Scene():
     
     def main_menu_scene():
-        scenestate = 
+       # scenestate = 
         print(STRING_SENTENCES['title'])
         
         print("""Choose your option:

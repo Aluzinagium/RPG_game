@@ -23,9 +23,10 @@ def main():
       #Limpa a tela e chama a primeira cena do jogo
       screen_clear()
       print("testeee")
+      print("E foi memo")
       Scene.main_menu_scene()
       actualscene = Game_State_Data()
-      actualscene.npcstate = 
+      #actualscene.npcstate = 
 main()
   
   
