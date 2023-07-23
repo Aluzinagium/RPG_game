@@ -9,7 +9,6 @@ class Game_State_Data():
     
 
 class Game_State():
-    print("ganhamo")
     def __init__(self, obj):
         
         self.player = obj.playerstate

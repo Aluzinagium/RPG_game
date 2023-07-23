@@ -1,0 +1,129 @@
+{	"Player": {
+		"name": "Ben", 
+		"race": "Dog", 
+		"classe": "Hunter", 
+		"constitution": 10, 
+		"tendency": "",
+		"hunting dog", 
+		"alignment": 
+		"Hunter", 
+		"description": "", 
+		"level": 1}
+	
+}
+	
+	
+	{"NPC": {
+		"bandit": [{
+			"name": "Ben", 
+			"race": "Orc", 
+			"class": "Hunter",  
+			"tendency": "Enemy", 
+			"armor": 2, 
+			"alignment": "Neutral good",
+			"strength": 4,
+			"dexterity": 4,
+			"constitution": 5,
+			"wisdom": 2,
+			"intelligence": 4,
+			"carisma": 3,
+			"description": "A hunter born in a small village called Thurgolt. He likes to kill.", 
+			"level": 2
+			}
+			{
+			"name": "Deymond Soft", 
+			"race": "Human", 
+			"class": "Hunter",  
+			"tendency": "neutral", 
+			"armor": 2, 
+			"alignment": "Neutral good",
+			"strength": 2,
+			"dexterity": 4,
+			"constitution": 3,
+			"wisdom": 2,
+			"intelligence": 4,
+			"carisma": 3,
+			"description": "A hunter born in a small village called Everfall. He likes to explore.", 
+			"level": 1
+			}
+			
+			{
+			"name": "Arnold Soft", 
+			"race": "Gnome", 
+			"class": "Hunter",  
+			"tendency": "neutral", 
+			"armor": 1, 
+			"alignment": "Neutral good",
+			"strength": 3,
+			"dexterity": 1,
+			"constitution": 4,
+			"wisdom": 6,
+			"intelligence": 5,
+			"carisma": 4,
+			"description": "A hunter born in a small village called Everfall. He likes to explore.", 
+			"level": 1
+			}
+			
+			
+			
+			
+			]
+			
+		"CLASSE-TIPO": {
+			"name": "Ben", 
+			"race": "Orc", 
+			"class": "Hunter",  
+			"tendency": "Enemy", 
+			"armor": 2, 
+			"alignment": "Neutral good",
+			"strength": 2,
+			"dexterity": 4,
+			"constitution": 5,
+			"wisdom": 2,
+			"intelligence": 4,
+			"carisma": 3,
+			"description": "A hunter born in a small village called Everfall. He likes to explore.", 
+			"level": 1
+			}	
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}

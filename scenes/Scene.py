@@ -8,7 +8,8 @@ from character.player.Player import Player, PlayerData
 from saves.Save_Game import Save
 from items.weapons.weapon import Weapon, WeaponData
 from character.npcs.Npc import NPC, NPCData
-from utils.default import STRING_SENTENCES
+from utils.default import *
+from utils.Generator import stats_generator
 
 """
 Created on Thu Jul 20 19:23:14 2023
@@ -20,7 +21,7 @@ SCENE FOLDER
 
 class Scene():
     
-    def main_menu_scene():
+    def main_menu_scene(self):
        # scenestate = 
         print(STRING_SENTENCES['title'])
         
@@ -36,7 +37,9 @@ class Scene():
                 
         if menu_selection == 1:
             print ("Game started!")
-           
+            self.player_creation()
+            
+            
         
             
         elif menu_selection == 2:
@@ -102,8 +105,8 @@ class Scene():
     def show_scene(self):
         print("""Voce está de frente a uma caverna, no meio de uma floresta. Esta caverna aparenta ser muito antiga e, aparentemente, ninguém vem aqui há muito tempo, pois você descobriu a caverna após retirar várias plantas que bloqueavam a entrada.""")
         npc_kobold = NPC("Edgar", "Kobold", "warrior", "neutral evil", "Enemy", 2, [5, 8, 2, 1, 1, 2], 
-"Um kobold guerreiro armado com uma espada enferrujada e quebrada. Parece um rato.",
-"espada velha", 24, 6, "vivo")
+        "Um kobold guerreiro armado com uma espada enferrujada e quebrada. Parece um rato.",
+        "espada velha", 24, 6, "vivo")
         print(npc_kobold.get_stats('health'))
         npc_kobold.set_health(40)
         print(npc_kobold.get_stats('health'))
@@ -115,4 +118,40 @@ class Scene():
            
         print(f"Voce encontra {npc_kobold._description}")
           
-   
+    def player_creation(self):
+        print("Now Let's create your character: ")
+        
+        newPlayer_data             = PlayerData()
+        newPlayer_data.name        = input("What's your character's name?? \n>> ")
+        newPlayer_data.race        = input("What's your character's race? \n>> ")
+        newPlayer_data._class      = input("What's your character's class? \n>> ")
+        newPlayer_data.description = input("Now write a short description about your character: ")
+        os.system('cls')
+        print("Fantastic!! Now let's roll your stats...")
+        newPlayer_data.stats_distribution(stats_generator(newPlayer_data)) 
+        print("Now let's continue the creation:")
+        player = Player(newPlayer_data)
+        print("Check you character: ")
+       
+       
+       
+        itemdata             = ItemData()
+        itemdata.name        = "Poção de cura"
+        itemdata.type        = "poção"
+        itemdata.description = "Uma poção que restaura vida"
+        pocao_cura           = Item(itemdata)
+            
+        espada             = WeaponData()
+        espada.name        = "Espada Bastarda"
+        espada.type        = "Arma"
+        espada.description = "Uma espada pesada e longa. O peso em si já é fatal."
+        espada.w_type      = "melee"
+        espada.damage      = 12
+        
+        player.add_item_inv(Weapon(espada))
+        player.add_item_inv(pocao_cura)
+       
+        os.system('cls')
+        print(player.check_player_info())
+        player.get_inventory()
+        

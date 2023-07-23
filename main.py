@@ -22,14 +22,15 @@ save = Save()
 def main():
       #Limpa a tela e chama a primeira cena do jogo
       screen_clear()
-      print("testeee")
-      print("E foi memo")
-      Scene.main_menu_scene()
+      main_menu = Scene()
+      main_menu.main_menu_scene()
       actualscene = Game_State_Data()
       #actualscene.npcstate = 
+
+            
 main()
-  
-  
+    
+print("\n\n\n\n\nFIM DO PROGRAMA")
   
   
   

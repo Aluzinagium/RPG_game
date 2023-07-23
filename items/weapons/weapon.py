@@ -34,7 +34,7 @@ class Weapon(Item):
         return self.name
     
     def get_type(self):
-        return self.i_type
+        return self.type
     
     
     
